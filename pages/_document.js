@@ -9,6 +9,7 @@ class MyDocument extends Document {
 					<Main />
 					<NextScript />
 					<div id="notifications"></div>
+					<div id="drawer-hook"></div>
 				</body>
 			</Html>
 		);

@@ -7,9 +7,11 @@ import classes from "./MainNavigation.module.css";
 const MainNavigation = () => {
 	return (
 		<header className={classes.header}>
-			<Link href="/">
-				<Logo />
-			</Link>
+			<div className={classes.logoSection}>
+				<Link href="/">
+					<Logo />
+				</Link>
+			</div>
 			<nav>
 				<ul>
 					<li>

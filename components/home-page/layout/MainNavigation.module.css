@@ -1,20 +1,53 @@
 .header {
+	position: relative;
 	width: 100%;
 	height: 6rem;
-	background-color: var(--color-grey-900);
+	/* background-color: var(--color-grey-900); */
+	background: var(--main-color-green);
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	padding: 0 10%;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+	z-index: 2;
+}
+
+.header nav {
+	display: flex;
+	justify-content: end;
+	align-items: flex-end;
+	width: 55%;
+	height: 100%;
+	background-color: var(--main-color-green);
+	margin-right: 2%;
+}
+
+.header nav::after {
+	content: "Created By Jordan Davis";
+	position: absolute;
+	top: 0;
+	font-size: 1.4em;
+	font-style: italic;
+	/* font-weight: bold; */
+	color: whitesmoke;
 }
 
 .header ul {
+	position: relative;
 	list-style: none;
 	display: flex;
 	justify-content: center;
-	align-items: baseline;
-	margin: 0;
+	margin-bottom: 2%;
 	padding: 0;
+	border-bottom: 2px solid rgb(180, 182, 180);
+}
+
+.header ul::before {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: rgb(180, 182, 180);
+	right: 55%;
 }
 
 .header li {
@@ -22,8 +55,10 @@
 }
 
 .header a {
-	color: var(--color-grey-100);
-	font-size: var(--size-4);
+	color: var(--color-grey-900);
+	font-size: 1.7em;
+	font-weight: bold;
+	font-family: "Oswald", sans-serif;
 }
 
 .header a:hover,
@@ -32,12 +67,30 @@
 	color: var(--color-grey-200);
 }
 
-@media (min-width: 768px) {
-	.header ul {
-		gap: 0.5rem;
+.logoSection {
+	position: relative;
+	width: 40%;
+	height: 95%;
+	border-bottom: white 2px solid;
+	background-color: rgb(50, 50, 50);
+}
+
+@media (max-width: 450px) {
+	.logoSection {
+		width: 45%;
 	}
 
 	.header a {
-		font-size: var(--size-5);
+		font-size: 1.2em;
+	}
+
+	.header nav::after {
+		font-size: 0.8em;
+	}
+}
+
+@media (min-width: 768px) {
+	.header ul {
+		gap: 0.5rem;
 	}
 }

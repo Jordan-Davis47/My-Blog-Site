@@ -1,13 +1,32 @@
-.logo {
+.logo h1 {
 	text-transform: uppercase;
-	font-size: var(--size-5);
+	font-size: var(--size-6);
 	font-weight: bold;
 	font-family: "Oswald", sans-serif;
 	color: var(--color-grey-50);
+	margin: 0;
+	width: 100%;
+}
+
+.logo p {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	color: gray;
+	font-weight: bold;
+	font-family: "Oswald", sans-serif;
+	margin: 0;
+	position: relative;
+	bottom: 7px;
+}
+
+@media (max-width: 400px) {
+	.logo h1 {
+		font-size: var(--size-5);
+	}
 }
 
 @media (min-width: 768px) {
-	.logo {
+	.logo h1 {
 		font-size: var(--size-8);
 	}
 }

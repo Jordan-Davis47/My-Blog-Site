@@ -7,8 +7,8 @@ const Hero = () => {
 			<div className={classes.image}>
 				<Image src="/images/site/Jordan-at-the-races.png" alt="An image showing Jordan" width={300} height={300} />
 			</div>
-			<h1>Hi, I'm Jordan</h1>
-			<p>I blog about my full stack web development progress and any related things I find interesting.</p>
+			<h1>Full Stack Development & Personal Interests</h1>
+			{/* <h3>Featured Posts</h3> */}
 		</section>
 	);
 };

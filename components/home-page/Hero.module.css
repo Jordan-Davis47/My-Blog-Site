@@ -1,17 +1,26 @@
 .hero {
 	text-align: center;
-	background-image: linear-gradient(to bottom, var(--color-grey-900), var(--color-grey-800));
 	padding: var(--size-8) 0;
+	background-color: rgb(186, 176, 176);
+
+	width: 50%;
+	height: 50vh;
+	max-width: 380px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .image {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
 	border-radius: 50%;
 	overflow: hidden;
 	background-color: var(--color-grey-700);
 	margin: auto;
+	position: relative;
+	bottom: 10%;
 }
 
 .image img {
@@ -22,9 +31,29 @@
 }
 
 .hero h1 {
-	font-size: var(--size-16);
-	margin: var(--size-4) 0;
+	font-size: var(--size-6);
+	margin: 0 auto;
 	color: var(--color-grey-300);
+	border: 2px solid black;
+	height: 65px;
+	width: 70vw;
+	max-width: 778px;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	bottom: 35%;
+	left: 0;
+	right: 0;
+	background-color: rgb(50, 50, 50);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero h3 {
+	font-size: var(--size-8);
+	position: relative;
+	font-style: italic;
 }
 
 .hero p {
@@ -33,4 +62,26 @@
 	width: 90%;
 	max-width: 40rem;
 	margin: auto;
+}
+
+@media (max-width: 550px) {
+	.image {
+		width: 200px;
+		height: 200px;
+	}
+
+	.hero h1 {
+		font-size: 1.4em;
+	}
+}
+
+@media (max-width: 400px) {
+	.image {
+		width: 150px;
+		height: 150px;
+	}
+
+	.hero h1 {
+		font-size: 1.1em;
+	}
 }
