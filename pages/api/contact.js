@@ -23,7 +23,7 @@ const handler = async (req, res) => {
 			client = new MongoClient(connectionString);
 			await client.connect();
 		} catch (err) {
-			res.status(500).json({ message: "Could not connect to database" });
+			res.status(500).json({ message: "Could not connect to database", errorMessage: err });
 			return;
 		}
 		console.log(client);
@@ -41,8 +41,6 @@ const handler = async (req, res) => {
 		}
 
 		client.close();
-
-		console.log(newMessage);
 
 		res.status(201).json({ response: "Successfully stored message", message: newMessage });
 	}
