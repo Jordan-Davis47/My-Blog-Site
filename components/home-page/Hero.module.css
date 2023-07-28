@@ -2,7 +2,7 @@
 	text-align: center;
 	padding: var(--size-8) 0;
 	background-color: rgb(186, 176, 176);
-
+	border-radius: 50%;
 	width: 50%;
 	height: 50vh;
 	max-width: 380px;

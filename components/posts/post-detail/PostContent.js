@@ -19,9 +19,6 @@ const PostContent = (props) => {
 
 	//custom renderer to change react markup html elements and what they render//
 	const customRenderers = {
-		// img(image) {
-		// 	return <Image src={`/images/posts/${post.slug}/${image.src}`} alt={image.alt} width={600} height={300} />;
-		// },
 		p(paragraph) {
 			const { node } = paragraph;
 			if (node.children[0].tagName === "img") {
@@ -39,9 +36,9 @@ const PostContent = (props) => {
 		//allows us to have code snippets styled//
 		code(code) {
 			const { className, children } = code;
-			// className is something like language-js => We need the "js" part here
-			const language = className.split("-")[1];
-			return <SyntaxHighlighter style={atomDark} languag={language} children={children} />;
+			// const language = className.split("-")[1];
+			const language = "javascript";
+			return <SyntaxHighlighter style={atomDark} language={language} children={children} />;
 		},
 	};
 
